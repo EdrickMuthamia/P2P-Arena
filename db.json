@@ -1,0 +1,125 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Admin Student",
+      "email": "admin@p2parena.com",
+      "password": "admin123",
+      "role": "admin",
+      "avatar": "",
+      "joinedAt": "2024-01-01",
+      "bio": "Platform administrator"
+    },
+    {
+      "id": "2",
+      "name": "Jane Doe",
+      "email": "jane@student.com",
+      "password": "jane123",
+      "role": "student",
+      "avatar": "",
+      "joinedAt": "2024-02-10",
+      "bio": "A-Level student passionate about sciences"
+    },
+    {
+      "id": "3",
+      "name": "John Smith",
+      "email": "john@student.com",
+      "password": "john123",
+      "role": "student",
+      "avatar": "",
+      "joinedAt": "2024-03-05",
+      "bio": "O-Level student focusing on mathematics"
+    }
+  ],
+  "papers": [
+    { "id": "1", "title": "Mathematics Paper 1 - 2023", "subject": "Mathematics", "description": "Pure mathematics covering algebra, calculus, and trigonometry.", "year": "2023", "category": "A-Level", "downloadUrl": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF2", "uploadDate": "2024-01-10" },
+    { "id": "2", "title": "Mathematics Paper 2 - 2023", "subject": "Mathematics", "description": "Statistics and mechanics section of the A-Level syllabus.", "year": "2023", "category": "A-Level", "downloadUrl": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF2", "uploadDate": "2024-01-10" },
+    { "id": "3", "title": "Physics Paper 1 - 2023", "subject": "Physics", "description": "Mechanics, waves, and thermodynamics questions.", "year": "2023", "category": "A-Level", "downloadUrl": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF2", "uploadDate": "2024-01-12" },
+    { "id": "4", "title": "Physics Paper 2 - 2023", "subject": "Physics", "description": "Electricity, magnetism, and modern physics.", "year": "2023", "category": "A-Level", "downloadUrl": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF2", "uploadDate": "2024-01-12" },
+    { "id": "5", "title": "Chemistry Paper 1 - 2023", "subject": "Chemistry", "description": "Organic and inorganic chemistry multiple choice.", "year": "2023", "category": "A-Level", "downloadUrl": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF2", "uploadDate": "2024-01-14" },
+    { "id": "6", "title": "Chemistry Paper 2 - 2023", "subject": "Chemistry", "description": "Physical chemistry and practical-based questions.", "year": "2023", "category": "A-Level", "downloadUrl": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF2", "uploadDate": "2024-01-14" },
+    { "id": "7", "title": "Biology Paper 1 - 2023", "subject": "Biology", "description": "Cell biology, genetics, and ecology questions.", "year": "2023", "category": "A-Level", "downloadUrl": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF2", "uploadDate": "2024-01-16" },
+    { "id": "8", "title": "Biology Paper 2 - 2023", "subject": "Biology", "description": "Human physiology and biochemistry.", "year": "2023", "category": "A-Level", "downloadUrl": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF2", "uploadDate": "2024-01-16" },
+    { "id": "9", "title": "English Language - 2023", "subject": "English", "description": "Reading comprehension, writing and language analysis.", "year": "2023", "category": "O-Level", "downloadUrl": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF2", "uploadDate": "2024-01-18" },
+    { "id": "10", "title": "English Literature - 2023", "subject": "English", "description": "Poetry, prose, and drama analysis.", "year": "2023", "category": "O-Level", "downloadUrl": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF2", "uploadDate": "2024-01-18" },
+    { "id": "11", "title": "Mathematics - 2022", "subject": "Mathematics", "description": "O-Level mathematics covering number, algebra, and geometry.", "year": "2022", "category": "O-Level", "downloadUrl": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF2", "uploadDate": "2024-01-20" },
+    { "id": "12", "title": "Science (Combined) - 2022", "subject": "Science", "description": "Combined science paper covering physics, chemistry, and biology basics.", "year": "2022", "category": "O-Level", "downloadUrl": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF2", "uploadDate": "2024-01-20" },
+    { "id": "13", "title": "History - 2023", "subject": "History", "description": "World history from 1900 to present day.", "year": "2023", "category": "O-Level", "downloadUrl": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF2", "uploadDate": "2024-01-22" },
+    { "id": "14", "title": "Geography - 2023", "subject": "Geography", "description": "Physical and human geography with map work.", "year": "2023", "category": "O-Level", "downloadUrl": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF2", "uploadDate": "2024-01-22" },
+    { "id": "15", "title": "Economics - 2023", "subject": "Economics", "description": "Micro and macroeconomics theory and application.", "year": "2023", "category": "A-Level", "downloadUrl": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF2", "uploadDate": "2024-01-24" },
+    { "id": "16", "title": "Business Studies - 2023", "subject": "Business", "description": "Business concepts, management, and case studies.", "year": "2023", "category": "A-Level", "downloadUrl": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF2", "uploadDate": "2024-01-24" },
+    { "id": "17", "title": "Computer Science - 2023", "subject": "Computer Science", "description": "Programming, algorithms, and computer systems.", "year": "2023", "category": "A-Level", "downloadUrl": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF2", "uploadDate": "2024-01-26" },
+    { "id": "18", "title": "Computer Science - 2022", "subject": "Computer Science", "description": "O-Level computer science fundamentals.", "year": "2022", "category": "O-Level", "downloadUrl": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF2", "uploadDate": "2024-01-26" },
+    { "id": "19", "title": "Accounting - 2023", "subject": "Accounting", "description": "Financial accounting principles and statements.", "year": "2023", "category": "A-Level", "downloadUrl": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF2", "uploadDate": "2024-01-28" },
+    { "id": "20", "title": "Accounting - 2022", "subject": "Accounting", "description": "O-Level accounting concepts and bookkeeping.", "year": "2022", "category": "O-Level", "downloadUrl": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF2", "uploadDate": "2024-01-28" }
+  ],
+  "quizzes": [
+    {
+      "id": "1",
+      "title": "Mathematics Basics",
+      "subject": "Mathematics",
+      "category": "A-Level",
+      "questions": [
+        { "id": 1, "question": "What is the derivative of x²?", "options": ["x", "2x", "2x²", "x/2"], "correct": 1 },
+        { "id": 2, "question": "Solve: 2x + 5 = 13", "options": ["x = 3", "x = 4", "x = 5", "x = 6"], "correct": 1 },
+        { "id": 3, "question": "What is sin(90°)?", "options": ["0", "0.5", "1", "-1"], "correct": 2 },
+        { "id": 4, "question": "What is the value of π (pi) to 2 decimal places?", "options": ["3.12", "3.14", "3.16", "3.18"], "correct": 1 },
+        { "id": 5, "question": "What is √144?", "options": ["11", "12", "13", "14"], "correct": 1 }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Physics Fundamentals",
+      "subject": "Physics",
+      "category": "A-Level",
+      "questions": [
+        { "id": 1, "question": "What is the unit of force?", "options": ["Watt", "Joule", "Newton", "Pascal"], "correct": 2 },
+        { "id": 2, "question": "What is the speed of light?", "options": ["3×10⁶ m/s", "3×10⁸ m/s", "3×10¹⁰ m/s", "3×10⁴ m/s"], "correct": 1 },
+        { "id": 3, "question": "Newton's first law is also called?", "options": ["Law of Gravity", "Law of Inertia", "Law of Motion", "Law of Energy"], "correct": 1 },
+        { "id": 4, "question": "What is the formula for kinetic energy?", "options": ["mgh", "½mv²", "mv", "Fd"], "correct": 1 },
+        { "id": 5, "question": "What does V = IR represent?", "options": ["Ohm's Law", "Newton's Law", "Faraday's Law", "Boyle's Law"], "correct": 0 }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Chemistry Essentials",
+      "subject": "Chemistry",
+      "category": "A-Level",
+      "questions": [
+        { "id": 1, "question": "What is the atomic number of Carbon?", "options": ["4", "6", "8", "12"], "correct": 1 },
+        { "id": 2, "question": "What is the chemical formula for water?", "options": ["HO", "H2O", "H2O2", "HO2"], "correct": 1 },
+        { "id": 3, "question": "What type of bond forms between Na and Cl?", "options": ["Covalent", "Metallic", "Ionic", "Hydrogen"], "correct": 2 },
+        { "id": 4, "question": "What is the pH of a neutral solution?", "options": ["0", "5", "7", "14"], "correct": 2 },
+        { "id": 5, "question": "What is the molar mass of O2?", "options": ["16 g/mol", "32 g/mol", "8 g/mol", "24 g/mol"], "correct": 1 }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Biology Basics",
+      "subject": "Biology",
+      "category": "O-Level",
+      "questions": [
+        { "id": 1, "question": "What is the powerhouse of the cell?", "options": ["Nucleus", "Ribosome", "Mitochondria", "Golgi body"], "correct": 2 },
+        { "id": 2, "question": "What molecule carries genetic information?", "options": ["RNA", "DNA", "ATP", "ADP"], "correct": 1 },
+        { "id": 3, "question": "How many chambers does the human heart have?", "options": ["2", "3", "4", "5"], "correct": 2 },
+        { "id": 4, "question": "What process do plants use to make food?", "options": ["Respiration", "Digestion", "Photosynthesis", "Transpiration"], "correct": 2 },
+        { "id": 5, "question": "What is the basic unit of life?", "options": ["Atom", "Molecule", "Cell", "Organ"], "correct": 2 }
+      ]
+    }
+  ],
+  "quizResults": [
+    { "id": "1", "userId": "2", "quizId": "1", "quizTitle": "Mathematics Basics", "subject": "Mathematics", "score": 4, "total": 5, "percentage": 80, "dateTaken": "2024-03-01", "answers": [1, 1, 2, 1, 1] },
+    { "id": "2", "userId": "2", "quizId": "2", "quizTitle": "Physics Fundamentals", "subject": "Physics", "score": 3, "total": 5, "percentage": 60, "dateTaken": "2024-03-05", "answers": [2, 1, 1, 1, 0] },
+    { "id": "3", "userId": "2", "quizId": "3", "quizTitle": "Chemistry Essentials", "subject": "Chemistry", "score": 5, "total": 5, "percentage": 100, "dateTaken": "2024-03-10", "answers": [1, 1, 2, 2, 1] },
+    { "id": "4", "userId": "3", "quizId": "1", "quizTitle": "Mathematics Basics", "subject": "Mathematics", "score": 3, "total": 5, "percentage": 60, "dateTaken": "2024-03-02", "answers": [1, 1, 2, 0, 1] }
+  ],
+  "certificates": [
+    { "id": "1", "userId": "2", "title": "Mathematics Excellence", "subject": "Mathematics", "achievement": "Scored 80% or above in Mathematics quiz", "issuedDate": "2024-03-01", "grade": "Distinction" },
+    { "id": "2", "userId": "2", "title": "Chemistry Mastery", "subject": "Chemistry", "achievement": "Achieved perfect score in Chemistry Essentials", "issuedDate": "2024-03-10", "grade": "Distinction" }
+  ],
+  "feedback": [
+    { "id": "1", "userId": "2", "userName": "Jane Doe", "rating": 5, "comment": "Amazing platform! The past papers are exactly what I needed for exam prep.", "category": "General", "createdAt": "2024-03-12" },
+    { "id": "2", "userId": "3", "userName": "John Smith", "rating": 4, "comment": "Great quizzes, really helped me understand the topics better.", "category": "Quizzes", "createdAt": "2024-03-15" },
+    { "id": "3", "userId": "2", "userName": "Jane Doe", "rating": 5, "comment": "The certificate feature is a great motivator to keep studying!", "category": "Certificates", "createdAt": "2024-03-18" }
+  ]
+}
