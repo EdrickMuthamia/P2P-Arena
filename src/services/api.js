@@ -3,9 +3,9 @@ import axios from 'axios';
 const API = axios.create({ baseURL: 'http://localhost:3001' });
 
 // --- Auth ---
-export const getUsers = () => API.get('/users');
-export const createUser = (data) => API.post('/users', data);
-export const updateUser = (id, data) => API.patch(`/users/${id}`, data);
+export const getUsers = () => API.get('/accounts');
+export const createUser = (data) => API.post('/accounts', data);
+export const updateUser = (id, data) => API.patch(`/accounts/${id}`, data);
 
 // --- Papers ---
 export const getPapers = () => API.get('/papers');
