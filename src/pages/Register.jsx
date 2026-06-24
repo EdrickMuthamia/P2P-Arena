@@ -9,6 +9,7 @@ export default function Register() {
   const { login } = useAuth();
   const navigate = useNavigate();
   const [form, setForm] = useState({ name: '', email: '', password: '', confirm: '' });
+  const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -17,8 +18,8 @@ export default function Register() {
     if (form.password.length < 6) { toast.error('Password must be at least 6 characters'); return; }
     setLoading(true);
     try {
-      const { data: users } = await getUsers();
-      if (users.find(u => u.email === form.email)) { toast.error('Email already registered'); return; }
+      const { data: accounts } = await getUsers();
+      if (accounts.find(u => u.email === form.email)) { toast.error('Email already registered'); setLoading(false); return; }
       const newUser = {
         id: generateId(), name: form.name, email: form.email,
         password: form.password, role: 'student', avatar: '',
@@ -29,17 +30,35 @@ export default function Register() {
       toast.success('Account created!');
       navigate('/');
     } catch {
-      toast.error('Server error. Is json-server running?');
-    } finally {
+      toast.error('Server error. Run: npm run dev');
       setLoading(false);
     }
   };
 
-  const field = (key, type, placeholder) => (
-    <div className="form-group">
-      <label>{key.charAt(0).toUpperCase() + key.slice(1)}</label>
-      <input className="form-control" type={type} required placeholder={placeholder}
-        value={form[key]} onChange={e => setForm(f => ({ ...f, [key]: e.target.value }))} />
+  const PasswordToggle = ({ field }) => (
+    <div style={{ position: 'relative' }}>
+      <input
+        className="form-control"
+        type={showPassword ? 'text' : 'password'}
+        required
+        placeholder={field === 'password' ? 'Min. 6 characters' : 'Repeat your password'}
+        style={{ paddingRight: '3rem' }}
+        value={form[field]}
+        onChange={e => setForm(f => ({ ...f, [field]: e.target.value }))}
+      />
+      <button
+        type="button"
+        onClick={() => setShowPassword(s => !s)}
+        style={{
+          position: 'absolute', right: '0.75rem', top: '50%',
+          transform: 'translateY(-50%)', background: 'none',
+          border: 'none', cursor: 'pointer', fontSize: '1.1rem',
+          color: 'var(--text-muted)', lineHeight: 1,
+        }}
+        aria-label={showPassword ? 'Hide password' : 'Show password'}
+      >
+        {showPassword ? '🙈' : '👁️'}
+      </button>
     </div>
   );
 
@@ -49,10 +68,24 @@ export default function Register() {
         <h2>Create Account</h2>
         <p>Join P2P Arena and start learning</p>
         <form onSubmit={handleSubmit}>
-          {field('name', 'text', 'Your full name')}
-          {field('email', 'email', 'you@example.com')}
-          {field('password', 'password', 'Min. 6 characters')}
-          {field('confirm', 'password', 'Repeat your password')}
+          <div className="form-group">
+            <label>Name</label>
+            <input className="form-control" type="text" required placeholder="Your full name"
+              value={form.name} onChange={e => setForm(f => ({ ...f, name: e.target.value }))} />
+          </div>
+          <div className="form-group">
+            <label>Email</label>
+            <input className="form-control" type="email" required placeholder="you@example.com"
+              value={form.email} onChange={e => setForm(f => ({ ...f, email: e.target.value }))} />
+          </div>
+          <div className="form-group">
+            <label>Password</label>
+            <PasswordToggle field="password" />
+          </div>
+          <div className="form-group">
+            <label>Confirm Password</label>
+            <PasswordToggle field="confirm" />
+          </div>
           <button type="submit" className="btn btn-primary" style={{ width: '100%' }} disabled={loading}>
             {loading ? 'Creating...' : 'Create Account'}
           </button>

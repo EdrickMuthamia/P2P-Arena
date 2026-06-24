@@ -8,21 +8,21 @@ export default function Login() {
   const { login } = useAuth();
   const navigate = useNavigate();
   const [form, setForm] = useState({ email: '', password: '' });
+  const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     try {
-      const { data: users } = await getUsers();
-      const found = users.find(u => u.email === form.email && u.password === form.password);
-      if (!found) { toast.error('Invalid email or password'); return; }
+      const { data: accounts } = await getUsers();
+      const found = accounts.find(u => u.email === form.email && u.password === form.password);
+      if (!found) { toast.error('Invalid email or password'); setLoading(false); return; }
       login(found);
       toast.success(`Welcome back, ${found.name.split(' ')[0]}!`);
       navigate(found.role === 'admin' ? '/admin' : '/');
     } catch {
-      toast.error('Server error. Is json-server running?');
-    } finally {
+      toast.error('Server error. Run: npm run dev');
       setLoading(false);
     }
   };
@@ -40,8 +40,30 @@ export default function Login() {
           </div>
           <div className="form-group">
             <label>Password</label>
-            <input className="form-control" type="password" required placeholder="••••••••"
-              value={form.password} onChange={e => setForm(f => ({ ...f, password: e.target.value }))} />
+            <div style={{ position: 'relative' }}>
+              <input
+                className="form-control"
+                type={showPassword ? 'text' : 'password'}
+                required
+                placeholder="••••••••"
+                style={{ paddingRight: '3rem' }}
+                value={form.password}
+                onChange={e => setForm(f => ({ ...f, password: e.target.value }))}
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword(s => !s)}
+                style={{
+                  position: 'absolute', right: '0.75rem', top: '50%',
+                  transform: 'translateY(-50%)', background: 'none',
+                  border: 'none', cursor: 'pointer', fontSize: '1.1rem',
+                  color: 'var(--text-muted)', lineHeight: 1,
+                }}
+                aria-label={showPassword ? 'Hide password' : 'Show password'}
+              >
+                {showPassword ? '🙈' : '👁️'}
+              </button>
+            </div>
           </div>
           <button type="submit" className="btn btn-primary" style={{ width: '100%' }} disabled={loading}>
             {loading ? 'Signing in...' : 'Sign In'}
