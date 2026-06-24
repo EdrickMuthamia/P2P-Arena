@@ -49,6 +49,16 @@
       "avatar": "",
       "joinedAt": "2026-06-24",
       "bio": ""
+    },
+    {
+      "id": "6BZS0-s-kYw",
+      "name": "edrick",
+      "email": "ed@gmial.com",
+      "password": "123456",
+      "role": "student",
+      "avatar": "",
+      "joinedAt": "2026-06-24",
+      "bio": ""
     }
   ],
   "papers": [
