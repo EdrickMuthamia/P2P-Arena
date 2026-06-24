@@ -39,6 +39,16 @@
       "avatar": "",
       "joinedAt": "2026-06-24",
       "bio": ""
+    },
+    {
+      "id": "D7pgXXgXkJY",
+      "name": "edrick",
+      "email": "ed@gmail.com",
+      "password": "Ed@2005",
+      "role": "student",
+      "avatar": "",
+      "joinedAt": "2026-06-24",
+      "bio": ""
     }
   ],
   "papers": [

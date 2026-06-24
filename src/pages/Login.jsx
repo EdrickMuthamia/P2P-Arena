@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { getUsers } from '../services/api';
+import { getUserByEmail } from '../services/api';
 import toast from 'react-hot-toast';
 
 export default function Login() {
@@ -15,8 +15,8 @@ export default function Login() {
     e.preventDefault();
     setLoading(true);
     try {
-      const { data: accounts } = await getUsers();
-      const found = accounts.find(u => u.email === form.email && u.password === form.password);
+      const { data: accounts } = await getUserByEmail(form.email);
+      const found = accounts.find(u => u.password === form.password);
       if (!found) { toast.error('Invalid email or password'); setLoading(false); return; }
       login(found);
       toast.success(`Welcome back, ${found.name.split(' ')[0]}!`);

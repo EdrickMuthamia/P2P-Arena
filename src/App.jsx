@@ -18,6 +18,7 @@ import Certificates from './pages/Certificates';
 import Feedback from './pages/Feedback';
 import Admin from './pages/Admin';
 
+import AIAssistant from './components/AIAssistant';
 import './styles/main.css';
 
 export default function App() {
@@ -47,6 +48,7 @@ export default function App() {
           </Routes>
         </main>
         <Footer />
+        <AIAssistant />
         <Toaster position="top-right" toastOptions={{ duration: 3000 }} />
       </BrowserRouter>
     </AuthProvider>

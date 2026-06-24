@@ -4,6 +4,7 @@ const API = axios.create({ baseURL: 'http://localhost:3001' });
 
 // --- Auth ---
 export const getUsers = () => API.get('/accounts');
+export const getUserByEmail = (email) => API.get(`/accounts?email=${email}`);
 export const createUser = (data) => API.post('/accounts', data);
 export const updateUser = (id, data) => API.patch(`/accounts/${id}`, data);
 

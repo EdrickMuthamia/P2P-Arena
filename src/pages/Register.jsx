@@ -5,6 +5,35 @@ import { getUsers, createUser } from '../services/api';
 import { generateId } from '../utils/helpers';
 import toast from 'react-hot-toast';
 
+function PasswordToggle({ field, showPassword, setShowPassword, value, onChange }) {
+  return (
+    <div style={{ position: 'relative' }}>
+      <input
+        className="form-control"
+        type={showPassword ? 'text' : 'password'}
+        required
+        placeholder={field === 'password' ? 'Min. 6 characters' : 'Repeat your password'}
+        style={{ paddingRight: '3rem' }}
+        value={value}
+        onChange={onChange}
+      />
+      <button
+        type="button"
+        onClick={() => setShowPassword(s => !s)}
+        style={{
+          position: 'absolute', right: '0.75rem', top: '50%',
+          transform: 'translateY(-50%)', background: 'none',
+          border: 'none', cursor: 'pointer', fontSize: '1.1rem',
+          color: 'var(--text-muted)', lineHeight: 1,
+        }}
+        aria-label={showPassword ? 'Hide password' : 'Show password'}
+      >
+        {showPassword ? '🙈' : '👁️'}
+      </button>
+    </div>
+  );
+}
+
 export default function Register() {
   const { login } = useAuth();
   const navigate = useNavigate();
@@ -35,33 +64,6 @@ export default function Register() {
     }
   };
 
-  const PasswordToggle = ({ field }) => (
-    <div style={{ position: 'relative' }}>
-      <input
-        className="form-control"
-        type={showPassword ? 'text' : 'password'}
-        required
-        placeholder={field === 'password' ? 'Min. 6 characters' : 'Repeat your password'}
-        style={{ paddingRight: '3rem' }}
-        value={form[field]}
-        onChange={e => setForm(f => ({ ...f, [field]: e.target.value }))}
-      />
-      <button
-        type="button"
-        onClick={() => setShowPassword(s => !s)}
-        style={{
-          position: 'absolute', right: '0.75rem', top: '50%',
-          transform: 'translateY(-50%)', background: 'none',
-          border: 'none', cursor: 'pointer', fontSize: '1.1rem',
-          color: 'var(--text-muted)', lineHeight: 1,
-        }}
-        aria-label={showPassword ? 'Hide password' : 'Show password'}
-      >
-        {showPassword ? '🙈' : '👁️'}
-      </button>
-    </div>
-  );
-
   return (
     <div className="auth-page">
       <div className="card auth-card">
@@ -80,11 +82,11 @@ export default function Register() {
           </div>
           <div className="form-group">
             <label>Password</label>
-            <PasswordToggle field="password" />
+            <PasswordToggle field="password" showPassword={showPassword} setShowPassword={setShowPassword} value={form.password} onChange={e => setForm(f => ({ ...f, password: e.target.value }))} />
           </div>
           <div className="form-group">
             <label>Confirm Password</label>
-            <PasswordToggle field="confirm" />
+            <PasswordToggle field="confirm" showPassword={showPassword} setShowPassword={setShowPassword} value={form.confirm} onChange={e => setForm(f => ({ ...f, confirm: e.target.value }))} />
           </div>
           <button type="submit" className="btn btn-primary" style={{ width: '100%' }} disabled={loading}>
             {loading ? 'Creating...' : 'Create Account'}
